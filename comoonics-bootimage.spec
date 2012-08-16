@@ -50,7 +50,7 @@
 
 %define RELEASENAME Gumpn
 %define PRODUCTNAME OpenSharedRoot
-%define PRODUCTVERSION 5.0
+%define PRODUCTVERSION 5.1
 %define DISTRIBUTIONNAME %{PRODUCTNAME} %{PRODUCTVERSION} (%{RELEASENAME})
 %define DISTRIBUTIONBASE %{DISTRIBUTIONNAME} Base
 %define DISTRIBUTIONEXTRAS %{DISTRIBUTIONNAME} Extras
@@ -62,7 +62,7 @@
 
 Name:          comoonics-bootimage
 Summary:       Scripts for creating an initrd in a OSR Cluster environment
-Version:       5.0
+Version:       5.1
 BuildArch:     noarch
 Requires:      comoonics-cluster-py >= 5.0
 Requires:      comoonics-bootimage-initscripts >= 5.0
@@ -70,7 +70,7 @@ Requires:      comoonics-bootimage-listfiles-all
 Requires:      comoonics-tools-py
 Requires:      comoonics-release >= 5.0
 #Conflicts:
-Release:       19_%{LINUXDISTROSHORT}
+Release:       1_%{LINUXDISTROSHORT}
 Vendor:        ATIX AG
 Packager:      ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -85,8 +85,8 @@ BuildRoot:     %{_tmppath}/%{name}-%{version}-buildroot
 Scripts for creating an initrd in a OSR cluster environment
 
 %package extras-localconfigs
-Version: 5.0
-Release: 9_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Obsoletes: comoonics-bootimage-extras-osr
 Summary: Extra for cluster configuration via local files
@@ -98,8 +98,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Extra for cluster configuration via local files instead of cluster.conf.
 
 %package extras-network
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Listfiles for special network configurations (vlan)
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -109,8 +109,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Extra listfiles for special network configurations
 
 %package extras-nfs
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Listfiles for nfs sharedroot configurations
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -122,8 +122,8 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 Extra listfiles for nfs sharedroot configurations
 
 %package extras-ocfs2
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Listfiles for ocfs2 sharedroot configurations
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -164,8 +164,8 @@ Obsoletes: comoonics-bootimage-extras-dm-multipath-rhel
 Extra listfiles for device mapper multipath OSR configurations for RHEL5
 
 %package extras-dm-multipath-rhel6
-Version: 5.0
-Release: 2_rhel6
+Version: 5.1
+Release: 1_rhel6
 Requires: comoonics-bootimage >= 5.0
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel6
@@ -212,8 +212,8 @@ Obsoletes: comoonics-bootimage-extras-dm-multipath-sles
 Extra listfiles for device mapper multipath OSR configurations for SLES
 
 %package extras-dm-multipath-sles11
-Version: 5.0
-Release: 2_sles11
+Version: 5.1
+Release: 1_sles11
 Requires: comoonics-bootimage >= 5.0
 Summary: Listfiles for device mapper multipath OSR configurations for SLES11
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -239,8 +239,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Extra listfiles for rdac multipath OSR configurations
 
 %package extras-xen
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Listfiles for xen support in the open-sharedroot cluster
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -251,8 +251,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 listfiles for xen support in the OSR cluster
 
 %package extras-iscsi
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 1.4-55
 Summary: Listfiles for iscsi support in the open-sharedroot cluster
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -287,8 +287,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 GlusterFS support in the OSR cluster
 
 %package extras-sysctl
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Extras for sysctl support in the open-sharedroot cluster
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -299,8 +299,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Sysctl support in the OSR cluster
 
 %package extras-syslog
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Syslog implementation for osr
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -310,8 +310,8 @@ Distribution: %{DISTRIBUTIONBASE}
 Syslog implementation for osr. Supports syslog classic, syslog-ng, rsyslog (See listfiles-syslog)
 
 %package extras-flexd-rhel5
-Version: 5.0
-Release: 2_rhel5
+Version: 5.1
+Release: 1_rhel5
 Summary: Flexdisk implementation for com.oonics flexboot for RHEL5
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -324,8 +324,8 @@ Conflicts: comoonics-bootimage-extras-flexd-sles11
 Flexdisk implementation for com.oonics flexboot for RHEL5
 
 %package extras-flexd-rhel6
-Version: 5.0
-Release: 2_rhel6
+Version: 5.1
+Release: 1_rhel6
 Summary: Flexdisk implementation for com.oonics flexboot for RHEL6
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -338,8 +338,8 @@ Conflicts: comoonics-bootimage-extras-flexd-sles11
 Flexdisk implementation for com.oonics flexboot for RHEL6
 
 %package extras-flexd-sles11
-Version: 5.0
-Release: 2_sles11
+Version: 5.1
+Release: 1_sles11
 Summary: Flexdisk implementation for com.oonics flexboot for SLES11
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -352,9 +352,9 @@ Conflicts: comoonics-bootimage-extras-flexd-rhel6
 Flexdisk implementation for com.oonics flexboot for SLES11
 
 %package listfiles-selinux-rhel5
-Version: 5.0
-Release: 2_rhel5
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel5
+Requires: comoonics-bootimage >= 5.1
 Summary: SELinux implementation for osr
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -363,9 +363,9 @@ Distribution: %{DISTRIBUTIONBASE}
 SELinux implementation for osr. Supports only local filesystems and distributions supporting SELinux
 
 %package listfiles-selinux-rhel6
-Version: 5.0
-Release: 2_rhel6
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel6
+Requires: comoonics-bootimage >= 5.1
 Summary: SELinux implementation for osr
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -385,8 +385,8 @@ Distribution: %{DISTRIBUTIONEXTRAS}
 Vi includes for comoonics-bootimage (takes vim)
 
 %package listfiles-vi-sles11
-Version: 5.0
-Release: 2_sles11
+Version: 5.1
+Release: 1_sles11
 Requires: comoonics-bootimage >= 1.4
 Summary: Vim includes for comoonics-bootimage
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -396,9 +396,9 @@ Distribution: %{DISTRIBUTIONEXTRAS}
 Vi includes for comoonics-bootimage (takes vim)
 
 %package listfiles-all
-Version: 5.0
-Release: 4_%{LINUXDISTROSHORT}
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
+Requires: comoonics-bootimage >= 5.1
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
 Summary: OSR listfilesfiles for all distributions 
@@ -408,8 +408,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 OSR Listfiles that are only relevant for all linux distributions
 
 %package listfiles-rhel5
-Version: 5.0
-Release: 4_rhel5
+Version: 5.1
+Release: 1_rhel5
 Requires: comoonics-bootimage >= 5.0
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-all
@@ -423,9 +423,9 @@ Obsoletes: comoonics-bootimage-listfiles-rhel
 OSR extra files that are only relevant for RHEL Versions
 
 %package listfiles-rhel6
-Version: 5.0
-Release: 4_rhel6
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel6
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-all
 Requires: comoonics-cluster-tools-py
@@ -468,8 +468,8 @@ Obsoletes: comoonics-bootimage-listfiles-sles
 OSR extra files that are only relevant for Novell SLES 10
 
 %package listfiles-sles11
-Version: 5.0
-Release: 3_sles11
+Version: 5.1
+Release: 1_sles11
 Requires: comoonics-bootimage >= 5.0
 Requires: /etc/SuSE-release
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -496,9 +496,9 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 OSR extra files that are only relevant for Fedora Versions and nfs support
 
 %package listfiles-rhel5-ext3
-Version: 5.0
-Release: 2_rhel5
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel5
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel5
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -515,9 +515,9 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL5 and EXT3
 
 %package listfiles-rhel5-ext4
-Version: 5.0
-Release: 2_rhel5
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel5
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel5
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -534,9 +534,9 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL5 and EXT4
 
 %package listfiles-rhel5-gfs
-Version: 5.0
-Release: 3_rhel5
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel5
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel5
 Requires: SysVinit-comoonics
@@ -556,9 +556,9 @@ Obsoletes: comoonics-bootimage-listfiles-rhel5-gfs1
 OSR extra files that are only relevant for RHEL5 and GFS
 
 %package listfiles-rhel5-gfs2
-Version: 5.0
-Release: 3_rhel5
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel5
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel5
 Requires: SysVinit-comoonics
@@ -577,8 +577,8 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL5 and GFS2
 
 %package listfiles-rhel5-nfs
-Version: 5.0
-Release: 2_rhel5
+Version: 5.1
+Release: 1_rhel5
 Requires: comoonics-bootimage-listfiles-rhel5
 Requires: comoonics-bootimage-extras-nfs
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -591,9 +591,9 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL5 Versions and nfs support
 
 %package listfiles-rhel5-ocfs2
-Version: 5.0
-Release: 2_rhel5
-Requires: comoonics-bootimage >= 1.4-81
+Version: 5.1
+Release: 1_rhel5
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel5
 Requires: SysVinit-comoonics
@@ -610,9 +610,9 @@ Conflicts: comoonics-bootimage-listfiles-rhel5-gfs2
 OSR extra files that are only relevant for RHEL5 and OCFS2
 
 %package listfiles-rhel6-ext3
-Version: 5.0
-Release: 2_rhel6
-Requires: comoonics-bootimage >= 5.0 
+Version: 5.1
+Release: 1_rhel6
+Requires: comoonics-bootimage >= 5.1 
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel6
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -629,9 +629,9 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL6 and EXT3
 
 %package listfiles-rhel6-ext4
-Version: 5.0
-Release: 2_rhel6
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel6
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel6
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -648,8 +648,8 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL6 and EXT4
 
 %package listfiles-rhel6-nfs
-Version: 5.0
-Release: 2_rhel6
+Version: 5.1
+Release: 1_rhel6
 Requires: comoonics-bootimage-listfiles-rhel6
 Requires: comoonics-bootimage-extras-nfs
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -666,9 +666,9 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for RHEL6 Versions and nfs support
 
 %package listfiles-rhel6-ocfs2
-Version: 5.0
-Release: 3_rhel6
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel6
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel6
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -684,9 +684,9 @@ Conflicts: comoonics-bootimage-listfiles-rhel6-gfs2
 OSR extra files that are only relevant for RHEL6 and OCFS2
 
 %package listfiles-rhel6-gfs2
-Version: 5.0
-Release: 3_rhel6
-Requires: comoonics-bootimage >= 5.0
+Version: 5.1
+Release: 1_rhel6
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-rhel6
 Requires: comoonics-bootimage-listfiles-rhel6-fencelib
@@ -749,9 +749,9 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for SLES11 and EXT3
 
 %package listfiles-sles11-ext4
-Version: 5.0
+Version: 5.1
 Release: 1_sles11
-Requires: comoonics-bootimage >= 5.0
+Requires: comoonics-bootimage >= 5.1
 Requires: /etc/SuSE-release
 Requires: comoonics-bootimage-listfiles-sles11
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -766,8 +766,8 @@ Conflicts: comoonics-bootimage-extras-ocfs2
 OSR extra files that are only relevant for SLES11 and EXT4
 
 %package listfiles-sles11-nfs
-Version: 5.0
-Release: 2_sles11
+Version: 5.1
+Release: 1_sles11
 Requires: comoonics-bootimage >= 5.0
 Requires: /etc/SuSE-release
 Requires: comoonics-bootimage-extras-nfs
@@ -782,8 +782,8 @@ Conflicts: comoonics-bootimage-listfiles-sles11-ocfs2
 OSR extra files that are only relevant for SLES11 Versions and nfs support
 
 %package listfiles-sles11-ocfs2
-Version: 5.0
-Release: 3_sles11
+Version: 5.1
+Release: 1_sles11
 Requires: comoonics-bootimage >= 5.0
 Requires: /etc/SuSE-release
 Requires: comoonics-bootimage-extras-ocfs2
@@ -799,8 +799,8 @@ Conflicts: comoonics-bootimage-listfiles-sles11-nfs
 OSR extra files that are only relevant for SLES11 Versions and OCFS2 support
 
 %package listfiles-imsd-plugins
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Obsoletes: comoonics-bootimage-listfiles-fenceacksv-plugins
 Requires: comoonics-bootimage >= 5.0
 Requires: comoonics-cs-sysreport-templates
@@ -814,8 +814,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 OSR extrafiles for plugins in imsd.
 
 %package listfiles-syslogd
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage-extras-syslog
 Summary: Syslog listfiles for syslog classic
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -828,8 +828,8 @@ Conflicts: comoonics-bootimage-listfiles-syslog-ng
 Syslog listfiles for syslog classic
 
 %package listfiles-rsyslogd
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage-extras-syslog
 Summary: Syslog listfiles for the rsyslog daemon
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -842,8 +842,8 @@ Conflicts: comoonics-bootimage-listfiles-syslog-ng
 Syslog listfiles for rsyslog daemon
 
 %package listfiles-syslog-ng
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage-extras-syslog
 Summary: Syslog listfiles for the syslog-ng daemon
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -868,7 +868,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Listfiles for the perl to be imported in the bootimage.
 
 %package listfiles-rhel5-fencelib
-Version: 5.0
+Version: 5.1
 Release: 1_rhel5
 Requires: comoonics-bootimage
 Summary: Listfiles for Fencelibs
@@ -881,7 +881,7 @@ Obsoletes: comoonics-bootimage-listfiles-fencelib
 Listfiles for the fencelibs to be imported in the bootimage.
 
 %package listfiles-rhel6-fencelib
-Version: 5.0
+Version: 5.1
 Release: 1_rhel6
 Requires: comoonics-bootimage
 Summary: Listfiles for Fencelibs
@@ -894,8 +894,8 @@ Obsoletes: comoonics-bootimage-listfiles-fencelib
 Listfiles for the fencelibs to be imported in the bootimage.
 
 %package listfiles-rhel5-fencevirt
-Version: 5.0
-Release: 3_rhel5
+Version: 5.1
+Release: 1_rhel5
 Requires: comoonics-bootimage
 Requires: comoonics-bootimage-listfiles-rhel5-fencelib
 Summary: Listfiles for fence_xvm and fence_virt
@@ -908,8 +908,8 @@ Obsoletes: comoonics-bootimage-listfiles-fencexvm
 Listfiles for the fence_xvm and fence_virt agent to be imported in the bootimage.
 
 %package listfiles-rhel6-fencevirt
-Version: 5.0
-Release: 3_rhel6
+Version: 5.1
+Release: 1_rhel6
 Requires: comoonics-bootimage
 Requires: comoonics-bootimage-listfiles-rhel6-fencelib
 Summary: Listfiles for fence_xvm and fence_virt
@@ -935,8 +935,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Files needed for fence_vmware in the kernel
 
 %package listfiles-firmware
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Listfiles for including firmware images into the initrd
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -947,8 +947,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 Listfiles for including firmware images into the initrd
 
 %package listfiles-plymouth
-Version: 5.0
-Release: 2_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.0
 Summary: Files needed for plymouth support in the initrd
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
@@ -971,8 +971,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 OSR files needed for the compatibility to 1.2 releases
 
 %package imsd
-Version: 5.0
-Release: 5_%{LINUXDISTROSHORT}
+Version: 5.1
+Release: 1_%{LINUXDISTROSHORT}
 Obsoletes: comoonics-bootimage-fenceacksv
 Requires: comoonics-imsd-py
 Requires: comoonics-bootimage >= 5.0
@@ -1734,6 +1734,8 @@ fi
 rm -rf %{buildroot}
 
 %changelog
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1.
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> - 5.0-19
   - Changed network interface detection.
     Udev will only be started if need be. 
@@ -2907,6 +2909,8 @@ rm -rf %{buildroot}
 - first offical rpm version
 
 %changelog extras-localconfigs
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> - 5.0-8
   - system-cfg-files/post.mkinitrd.d/19-copy-network-configurations.sh:
     - will also copy all configuration files but disable those which
@@ -2986,6 +2990,8 @@ rm -rf %{buildroot}
 - first release
 
 %changelog extras-xen
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3003,6 +3009,8 @@ rm -rf %{buildroot}
 - first release
 
 %changelog extras-iscsi
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3053,6 +3061,8 @@ rm -rf %{buildroot}
 - first release
 
 %changelog extras-nfs
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3099,6 +3109,8 @@ rm -rf %{buildroot}
 - added nfs-lib.sh file
 
 %changelog extras-ocfs2
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3146,6 +3158,8 @@ rm -rf %{buildroot}
 - introduced the changelog
 
 %changelog extras-dm-multipath-rhel5
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3154,6 +3168,8 @@ rm -rf %{buildroot}
 - introduced instead of rhel
 
 %changelog extras-dm-multipath-rhel6
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3168,6 +3184,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog extras-dm-multipath-sles11
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3198,6 +3216,8 @@ rm -rf %{buildroot}
 - initial revision (thanks to Gordan)
 
 %changelog extras-sysctl
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3208,6 +3228,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog extras-syslog
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3243,6 +3265,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog extras-flexd-rhel5
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3255,6 +3279,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog extras-flexd-rhel6
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3267,6 +3293,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog extras-flexd-sles11
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3279,6 +3307,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog listfiles-selinux-rhel5
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3287,6 +3317,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog listfiles-selinux-rhel6
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3295,6 +3327,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog listfiles-all
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> - 5.0-4
   * Fixed bug with missing vlan drivers (llc is also required).
 * Fri Feb 03 2012 Marc Grimme <grimme( at )atix.de> - 5.0-3
@@ -3342,6 +3376,8 @@ rm -rf %{buildroot}
   - initial revision 
 
 %changelog listfiles-rhel5
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> 5.0-4
   - system-cfg-files/rpms.initrd.d/rhel5/base.list,
     added grep (required by network functionality)
@@ -3381,6 +3417,8 @@ rm -rf %{buildroot}
   - initial revision 
 
 %changelog listfiles-rhel6
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> 5.0-4
   - system-cfg-files/rpms.initrd.d/rhel6/base.list,
     added grep (required by network functionality)
@@ -3418,6 +3456,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog listfiles-sles11
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Fri Jun 22 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
   - removed depfile sles/comoonics.list to listfiles-sles11-ocfs2
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
@@ -3460,14 +3500,20 @@ rm -rf %{buildroot}
 - introduced the changelog
 
 %changelog listfiles-rhel5-ext3
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - initial revision
 
 %changelog listfiles-rhel5-ext4
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - initial revision
 
 %changelog listfiles-rhel5-gfs
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Mon Feb 13 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
   - moved comoonics.list to rhel5 directory. Not needed for RHEL6
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
@@ -3478,6 +3524,8 @@ rm -rf %{buildroot}
 - first version for comoonics-5.0-pre
 
 %changelog listfiles-rhel5-gfs2
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Mon Feb 13 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
   - moved comoonics.list to rhel5 directory. Not needed for RHEL6
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
@@ -3488,6 +3536,8 @@ rm -rf %{buildroot}
 - first version for comoonics-5.0-pre
 
 %changelog listfiles-rhel5-nfs
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3502,6 +3552,8 @@ rm -rf %{buildroot}
 - first version for comoonics-5.0-pre
 
 %changelog listfiles-rhel5-ocfs2
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3510,14 +3562,20 @@ rm -rf %{buildroot}
   initial revision
 
 %changelog listfiles-rhel6-ext3
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - initial revision
 
 %changelog listfiles-rhel6-ext4
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - initial revision
 
 %changelog listfiles-rhel6-nfs
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3533,6 +3591,8 @@ rm -rf %{buildroot}
 - first version for comoonics-5.0-pre
 
 %changelog listfiles-rhel6-ocfs2
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Mon Feb 13 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
   - removed SysVinit-comoonics dependency (not needed for RHEL6)
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
@@ -3543,6 +3603,8 @@ rm -rf %{buildroot}
   initial revision
 
 %changelog listfiles-rhel6-gfs2
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Mon Feb 23 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
   - system-cfg-files/rpms.initrd.d/rhel6/rhcs.list: added libxml2 required by
       cman initscript
@@ -3573,14 +3635,20 @@ rm -rf %{buildroot}
   initial revision
 
 %changelog listfiles-sles11-ext3
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
   - initial revision
 
 %changelog listfiles-sles11-ext4
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
   - initial revision
 
 %changelog listfiles-sles11-nfs
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3591,6 +3659,8 @@ rm -rf %{buildroot}
 - first version for comoonics-5.0-pre
 
 %changelog listfiles-sles11-ocfs2
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Fri Jun 22 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
   - moved sles/comoonics.list to here.
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
@@ -3617,6 +3687,8 @@ rm -rf %{buildroot}
 - introduced the changelog
 
 %changelog listfiles-syslogd
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3631,6 +3703,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog listfiles-rsyslogd
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3647,6 +3721,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog listfiles-syslog-ng
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3657,6 +3733,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog listfiles-imsd-plugins
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3675,10 +3753,14 @@ rm -rf %{buildroot}
 - initial version 
 
 %changelog listfiles-fencelib-rhel5
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Feb 14 2012 Marc Grimme <grimme ( at )atix.de> 5.0-1
   - initial revision obsoletes listfiles-fencelib
 
 %changelog listfiles-fencelib-rhel6
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Feb 14 2012 Marc Grimme <grimme ( at )atix.de> 5.0-1
   - initial revision obsoletes listfiles-fencelib
 
@@ -3722,6 +3804,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog listfiles-plymouth
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Tue Nov 08 2011 Marc Grimme <grimme( at )atix.de> 5.0-2
   - added post scripts.
 * Tue Nov 01 2011 Marc Grimme <grimme( at )atix.de> 5.0-1
@@ -3730,6 +3814,8 @@ rm -rf %{buildroot}
 - initial revision
 
 %changelog imsd
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
+  - Rebase for 5.1
 * Wed Nov 30 2011 Marc Grimme <grimme( at )atix.de> - 5.0-5
   * shell.py: use the right constructor to create a valid systeminformation
 * Tue Nov 29 2011 Marc Grimme <grimme( at )atix.de> - 5.0-4

@@ -60,7 +60,7 @@ INSTALL_DIR=/opt/atix/comoonics_bootimage
 #  IDEAS
 #  SOURCE
 #
-VERSION=5.0
+VERSION=5.1
 
 #****d* Makefile/ARCHIVE_FILE
 #  NAME
@@ -93,7 +93,7 @@ CHANNELBASEDIR=/atix/dist-mirrors
 DISTROS=rhel5 rhel6 sles10 fedora sles11
 SHORTDISTRO=rhel5
 PRODUCTNAME=comoonics
-PRODUCTVERSION=5.0
+PRODUCTVERSION=5.1
 CHANNELNAMES=preview:base addons:extras
 CHANNELDIR=$(CHANNELBASEDIR)/$(PRODUCTNAME)/$(PRODUCTVERSION)
 ARCHITECTURES=i386 x86_64 noarch SRPMS

@@ -44,7 +44,7 @@
 
 %define RELEASENAME Gumpn
 %define PRODUCTNAME OpenSharedRoot
-%define PRODUCTVERSION 5.0
+%define PRODUCTVERSION 5.1
 %define DISTRIBUTIONNAME %{PRODUCTNAME} %{PRODUCTVERSION} (%{RELEASENAME})
 %define DISTRIBUTIONBASE %{DISTRIBUTIONNAME} Base
 %define DISTRIBUTIONEXTRAS %{DISTRIBUTIONNAME} Extras
@@ -63,12 +63,12 @@
 
 Name: comoonics-bootimage-initscripts
 Summary: Initscripts used by the OSR cluster environment for Novell SLES10.
-Version: 5.0
+Version: 5.1
 BuildArch: noarch
-Requires: comoonics-bootimage >= 5.0
+Requires: comoonics-bootimage >= 5.1
 Requires: comoonics-bootimage-listfiles-sles11
 #Conflicts:
-Release: 3_sles11
+Release: 1_sles11
 Vendor: ATIX AG
 Packager: ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -128,6 +128,8 @@ true
 %attr(755, root, root) %{INITDIR}/halt.local
 
 %changelog
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> 5.1-1
+  - Rebase for comoonics 5.1
 * Tue Feb 14 2012 Marc Grimme <grimme( at )atix.de> 5.0-3
    - initscripts/bootsr: 
     - changed stop order of bootsr to be stopped later

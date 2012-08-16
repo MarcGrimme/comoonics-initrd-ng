@@ -46,7 +46,7 @@
 
 %define RELEASENAME Gumpn
 %define PRODUCTNAME OpenSharedRoot
-%define PRODUCTVERSION 5.0
+%define PRODUCTVERSION 5.1
 %define DISTRIBUTIONNAME %{PRODUCTNAME} %{PRODUCTVERSION} (%{RELEASENAME})
 %define DISTRIBUTIONBASE %{DISTRIBUTIONNAME} Base
 %define DISTRIBUTIONEXTRAS %{DISTRIBUTIONNAME} Extras
@@ -65,13 +65,13 @@
 
 Name: comoonics-bootimage-initscripts
 Summary: Initscripts used by the OSR cluster environment.
-Version: 5.0
+Version: 5.1
 BuildArch: noarch
-Requires: comoonics-bootimage >= 5.0
+Requires: comoonics-bootimage >= 5.1
 Requires: comoonics-bootimage-listfiles-all
 Requires: comoonics-bootimage-listfiles-rhel5
 #Conflicts: 
-Release: 8_rhel5
+Release: 1_rhel5
 Vendor: ATIX AG
 Packager: ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -223,6 +223,8 @@ fi
 rm -rf %{buildroot}
 
 %changelog
+* Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> 5.1-1
+  - Rebase for comoonics 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> 5.0-8
    - initscripts/rhel5/halt: don't remount ro with cluster file system.
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> 5.0-7
