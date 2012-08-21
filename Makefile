@@ -601,7 +601,7 @@ channelbuild:
 	done 
 
 .PHONY:rpm	
-rpm: test rpmbuild rpmbuild-initscripts-el4 rpmbuild-initscripts-el5 rpmbuild-initscripts-sles10 rpmbuild-initscripts-sles11 rpmbuild-initscripts-fedora \
+rpm: rpmbuild rpmbuild-initscripts-el4 rpmbuild-initscripts-el5 rpmbuild-initscripts-sles10 rpmbuild-initscripts-sles11 rpmbuild-initscripts-fedora \
 rpmsign
 
 .PHONY: channel
