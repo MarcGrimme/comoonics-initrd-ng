@@ -70,7 +70,7 @@ Requires:      comoonics-bootimage-listfiles-all
 Requires:      comoonics-tools-py
 Requires:      comoonics-release >= 5.0
 #Conflicts:
-Release:       1_%{LINUXDISTROSHORT}
+Release:       2_%{LINUXDISTROSHORT}
 Vendor:        ATIX AG
 Packager:      ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -397,7 +397,7 @@ Vi includes for comoonics-bootimage (takes vim)
 
 %package listfiles-all
 Version: 5.1
-Release: 1_%{LINUXDISTROSHORT}
+Release: 2_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.1
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -1734,6 +1734,8 @@ fi
 rm -rf %{buildroot}
 
 %changelog
+* Mon Sep 24 2012 Marc Grimme <grimme( at )atix.de> - 5.1-2
+  - Added egrep for network listfile
 * Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
   - Rebase for 5.1.
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> - 5.0-19
@@ -3327,6 +3329,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog listfiles-all
+* Mon Sep 24 2012 Marc Grimme <grimme( at )atix.de> - 5.1-2
+  - Added egrep to network.list required for network scripts.
 * Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
   - Rebase for 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> - 5.0-4
