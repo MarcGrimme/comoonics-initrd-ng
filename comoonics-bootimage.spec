@@ -500,6 +500,15 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 %description listfiles-fence_vmware-rhel5
 Files needed for fence_vmware in the kernel
 
+%package listfiles-vmware-vmxnet3
+Version: 0.1
+Release: 1
+Requires: comoonics-boogimage >= 1.4
+Summary: Listfiles for vmware vmxnet3 drivers from rpm
+BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
+%description listfiles-vmware-vmxnet3
+Listfiles for vmware vmxnet3 drivers from rpm
+
 %package listfiles-firmware
 Version: 0.1
 Release: 1
@@ -978,6 +987,9 @@ fi
 
 %files listfiles-vi-sles
 %config %attr(0644, root, root) %{CONFIGDIR}/bootimage/rpms.initrd.d/sles/vim.list
+
+%files listfiles-vmware-vmxnet3
+%config %attr(0644, root, root) %{CONFIGDIR}/bootimage/rpms.initrd.d/vmware-vmxnet3.list
 
 %files listfiles-firmware
 %config %attr(0644, root, root) %{CONFIGDIR}/bootimage/files.initrd.d/firmware.list
