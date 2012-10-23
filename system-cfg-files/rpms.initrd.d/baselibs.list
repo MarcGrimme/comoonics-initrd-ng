@@ -4,6 +4,6 @@ openssl			\.so\.*
 glibc			^/lib
 expat			\.so\.*
 zlib			\.so\.*
-libxml2			\.so\.*
+libxml2
 coreutils
 procps
