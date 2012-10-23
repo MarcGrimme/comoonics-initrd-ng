@@ -70,7 +70,7 @@ Requires:      comoonics-bootimage-listfiles-all
 Requires:      comoonics-tools-py
 Requires:      comoonics-release >= 5.0
 #Conflicts:
-Release:       2_%{LINUXDISTROSHORT}
+Release:       3_%{LINUXDISTROSHORT}
 Vendor:        ATIX AG
 Packager:      ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -397,7 +397,7 @@ Vi includes for comoonics-bootimage (takes vim)
 
 %package listfiles-all
 Version: 5.1
-Release: 2_%{LINUXDISTROSHORT}
+Release: 3_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.1
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -1748,6 +1748,9 @@ fi
 rm -rf %{buildroot}
 
 %changelog
+* Tue Oct 23 2012 Marc Grimme <grimme( at )atix.de> - 5.1-3
+  - Fixed bug in baselibs.list where only libs from libxml2 where included
+    but RHCS requires binaries also.
 * Mon Sep 24 2012 Marc Grimme <grimme( at )atix.de> - 5.1-2
   - Added egrep for network listfile
 * Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
@@ -3343,6 +3346,9 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog listfiles-all
+* Tue Oct 23 2012 Marc Grimme <grimme( at )atix.de> - 5.1-3
+  - baselibs.list: Fixed bug where RHEL6.3 RHCS required binaries
+     from libxml2 also besides libs.
 * Mon Sep 24 2012 Marc Grimme <grimme( at )atix.de> - 5.1-2
   - Added egrep to network.list required for network scripts.
 * Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
