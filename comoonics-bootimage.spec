@@ -70,7 +70,7 @@ Requires:      comoonics-bootimage-listfiles-all
 Requires:      comoonics-tools-py
 Requires:      comoonics-release >= 5.0
 #Conflicts:
-Release:       3_%{LINUXDISTROSHORT}
+Release:       4_%{LINUXDISTROSHORT}
 Vendor:        ATIX AG
 Packager:      ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -397,7 +397,7 @@ Vi includes for comoonics-bootimage (takes vim)
 
 %package listfiles-all
 Version: 5.1
-Release: 3_%{LINUXDISTROSHORT}
+Release: 4_%{LINUXDISTROSHORT}
 Requires: comoonics-bootimage >= 5.1
 Group:   %{GROUPPARENT}/%{GROUPCHILDBASE}
 Distribution: %{DISTRIBUTIONBASE}
@@ -1748,6 +1748,8 @@ fi
 rm -rf %{buildroot}
 
 %changelog
+* Wed Feb 27 2013 Marc Grimme <grimme( at )atix.de> - 5.1-4
+  - Fixed bug that /etc/modprobe.d was not included in initrd BZ#469
 * Tue Oct 23 2012 Marc Grimme <grimme( at )atix.de> - 5.1-3
   - Fixed bug in baselibs.list where only libs from libxml2 where included
     but RHCS requires binaries also.
@@ -3346,6 +3348,8 @@ rm -rf %{buildroot}
   - initial revision
 
 %changelog listfiles-all
+* Wed Feb 27 2013 Marc Grimme <grimme( at )atix.de> - 5.1-4
+  - Fixed bug that /etc/modprobe.d was not included in initrd BZ#469
 * Tue Oct 23 2012 Marc Grimme <grimme( at )atix.de> - 5.1-3
   - baselibs.list: Fixed bug where RHEL6.3 RHCS required binaries
      from libxml2 also besides libs.
