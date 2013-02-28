@@ -59,7 +59,7 @@ Requires: comoonics-bootimage-initscripts >= 1.4
 Requires: comoonics-bootimage-listfiles-all
 Requires: comoonics-tools-py
 #Conflicts:
-Release: 79_7
+Release: 79_8
 Vendor: ATIX AG
 Packager: ATIX AG <http://bugzilla.atix.de>
 ExclusiveArch: noarch
@@ -291,7 +291,7 @@ Vi includes for comoonics-bootimage (takes vim)
 
 %package listfiles-all
 Version: 0.1
-Release: 16
+Release: 16_1
 Requires: comoonics-bootimage >= 1.4-55
 Group:   System Environment/Base
 Summary: OSR listfilesfiles for all distributions 
@@ -1040,6 +1040,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Feb 27 2012 Marc Grimme <grimme@atix.de> 1.4-79_8
+- fixed bug #469 where /etc/modprobe.d is not included in initrd.
 * Mon Jul 21 2011 Marc Grimme <grimme@atix.de> 1.4-79_7
 - fixed bug #431 where network detection could mix up network configuration with servers with multiple
   different nics.
@@ -1781,6 +1783,8 @@ syslog
 - initial revision
 
 %changelog listfiles-all
+* Wed Feb 27 2012 Marc Grimme <grimme@atix.de> 0.1-16_1
+- fixed bug #469 where /etc/modprobe.d is not included in initrd.
 * Wed Feb 16 2011 Marc Grimme <grimme@atix.de> 0.1-16
 - pre.mkinitrd.d/00-cdsl-check.sh post.mkinitrd.d/02-create-cdsl-repository.sh
   - checks if cdsl environment is working
