@@ -424,7 +424,7 @@ OSR extra files that are only relevant for RHEL Versions
 
 %package listfiles-rhel6
 Version: 5.1
-Release: 1_rhel6
+Release: 2_rhel6
 Requires: comoonics-bootimage >= 5.1
 Requires: /etc/redhat-release
 Requires: comoonics-bootimage-listfiles-all
@@ -3445,6 +3445,8 @@ rm -rf %{buildroot}
   - initial revision 
 
 %changelog listfiles-rhel6
+* Thu May 16 2013 Marc Grimme <grimme( at )atix.de> - 5.1-2
+   - Also include /etc/depmod.d into initrd (to get the right modules loaded)
 * Thu Aug 16 2012 Marc Grimme <grimme( at )atix.de> - 5.1-1
   - Rebase for 5.1
 * Thu Jul 05 2012 Marc Grimme <grimme( at )atix.de> 5.0-4
